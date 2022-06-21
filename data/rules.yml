@@ -1,0 +1,17 @@
+version: "3.1"
+
+rules:
+  - rule: Say goodbye anytime the user says goodbye
+    steps:
+      - intent: goodbye
+      - action: utter_goodbye
+
+  - rule: Run ActionHelloWorld
+    steps:
+      - intent: aks_hello_world
+      - action: action_hello_world
+
+  - rule: Fetch Data
+    steps:
+      - intent: fetch_data
+      - action: action_fetch_data

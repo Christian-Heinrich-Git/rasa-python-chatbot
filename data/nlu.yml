@@ -1,0 +1,48 @@
+version: "3.1"
+
+nlu:
+  - intent: greet
+    examples: |
+      - hey
+      - hello
+      - hi
+      - hallo
+      - guten tag
+      - guten morgen
+      - guten abend
+      - abend
+      - moin
+      - servus
+      - peace
+
+  - intent: goodbye
+    examples: |
+      - cu
+      - ciao
+      - bis bald
+      - tschau
+      - bye
+      - goodbye
+
+  - intent: ask_whats_innocard
+    examples: |
+      - Was ist innocard?
+      - Kannst du mir innocard erklären?
+      - Wie geht das?
+
+  - intent: ask_extra_app
+    examples: |
+      - Brauche ich eine App?
+      - Brauchen meine Kunden eine App?
+      - Benötigt man eine extra app?
+      - Wird eine app benötigt?
+      - Brauch ich ne app?
+      - muss ich etwas installieren?
+
+  - intent: aks_hello_world
+    examples: |
+      - kannst du hello world ausführen
+
+  - intent: fetch_data
+    examples: |
+      - daten holen

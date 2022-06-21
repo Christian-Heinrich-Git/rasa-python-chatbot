@@ -1,0 +1,33 @@
+version: "3.1"
+
+intents:
+  - greet
+  - goodbye
+  - ask_whats_innocard
+  - ask_extra_app
+  - aks_hello_world
+  - fetch_data
+
+responses:
+  utter_greet:
+    - text: "Hi ich bin die Künstliche Intelligenz von Innocard. Wie kann ich dir behilflich sein?"
+
+  utter_goodbye:
+    - text: "Bis bald :)"
+
+  utter_ask_whats_innocard:
+    - text: "Innocard ist eine im Web verfügbare digitale Menükarte. Du kannst die Menükarte in jedem Handy über einen QR-Coder oder per Link anschauen. Keine extra App wird benötigt."
+
+  utter_aks_extra_app:
+    - text: "Innocard benötigt keine extra App. Die Menükarte wird direkt im Browser im Handy geöffnet."
+
+  utter_try_it:
+    - text: "Probiere es gerne selbst aus!"
+
+session_config:
+  session_expiration_time: 120
+  carry_over_slots_to_new_session: true
+
+actions:
+  - action_hello_world
+  - action_fetch_data

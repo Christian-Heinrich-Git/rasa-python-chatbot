@@ -1,0 +1,19 @@
+version: "3.1"
+
+stories:
+  - story: happy path
+    steps:
+      - intent: greet
+      - action: utter_greet
+
+  - story: try it path 1
+    steps:
+      - intent: ask_whats_innocard
+      - action: utter_ask_whats_innocard
+      - action: utter_try_it
+
+  - story: try it path 2
+    steps:
+      - intent: ask_extra_app
+      - action: utter_aks_extra_app
+      - action: utter_try_it

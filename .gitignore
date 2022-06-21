@@ -1,0 +1,5 @@
+.rasa
+models
+__pycache__
+Anwendungsfall.txt
+procedure.txt
