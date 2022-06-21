@@ -36,7 +36,7 @@ class ActionFetchData(Action):
             tracker: Tracker,
             domain: Dict[Text, Any]) -> List[Dict[Text, Any]]:
 
-        # TODO: über status codes hat geklappt oder nicht zurück schicken
+        # TODO: über status codes zurück schicken ob es geklappt hat  oder nicht
         http = urllib3.PoolManager()
         r = http.request('GET', 'http://localhost:5001/innocard-prod/us-central1/createAccount?email=mytest@mail')
         print("hier steht r.data: ", r.data)
