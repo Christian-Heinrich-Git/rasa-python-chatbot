@@ -7,6 +7,10 @@ intents:
   - ask_extra_app
   - aks_hello_world
   - fetch_data
+  - ask_example
+  - ask_price
+  - ask_create
+  - ask_price_setup
 
 responses:
   utter_greet:
@@ -23,6 +27,18 @@ responses:
 
   utter_try_it:
     - text: "Probiere es gerne selbst aus!"
+
+  utter_ask_price:
+    - text: "Innocard Free ist vollständig kostenlos mit Werbung. Innocard Premium kostet nur 29€ pro Monat und ist komplett werbefrei."
+
+  utter_ask_price_setup:
+    - text: "Du kannst deine Karte kostenlos selbst einpflegen. Alternativ können wir deine Karte für eine einmalige Gebühr von 50€ einpflegen."
+
+  utter_ask_create:
+    - text: "Wir können gerne eine Karte zusammen erstellen."
+
+  utter_ask_example:
+    - text: "Hier ist ein QR-Code der Shisha Bar: Mosaique Lounge. Diesen kannst du mit deinem Handy scannen oder den Link darunter anklicken."
 
 session_config:
   session_expiration_time: 120

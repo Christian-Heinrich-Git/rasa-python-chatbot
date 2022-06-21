@@ -30,6 +30,40 @@ nlu:
       - Kannst du mir innocard erklären?
       - Wie geht das?
 
+  - intent: ask_example
+    examples: |
+      - Kannst du mir ein Beispiel zeigen?
+      - Hast du ein Beispiel?
+      - Zeig mir eine Karte
+      - Kann ich eine Karte sehen?
+      - Kannst du mir eine Karte zeigen?
+      - Ich würde gerne eine Karte sehen
+
+  - intent: ask_price
+    examples: |
+      - Was kostet Innocard?
+      - Was kostet eine Innocard?
+      - Was muss ich für Innocard zahlen?
+      - Was ist der Preis von Innocard?
+      - Ist Innocard teuer?
+      - Wie teuer?
+      - Wie viel Euro?
+
+  - intent: ask_price_setup
+    examples: |
+      - Gibt es Einmalkosten?
+      - Gibt es einamlige Kosten?
+      - Was kostet die Einrichtung?
+      - Was kostet eine Erstellung?
+
+  - intent: ask_create
+    examples: |
+      - Wie kann ich eine Innocard erstellen?
+      - Kannst du eine Innocard erstellen?
+      - Kann ich selber eine Innocard erstellen?
+      - Können wir eine Innocard erstellen?
+      - Kannst du mir eine Karte erstellen?
+
   - intent: ask_extra_app
     examples: |
       - Brauche ich eine App?

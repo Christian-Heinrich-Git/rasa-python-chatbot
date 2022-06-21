@@ -15,3 +15,23 @@ rules:
     steps:
       - intent: fetch_data
       - action: action_fetch_data
+
+  - rule: Answere ask_example
+    steps:
+      - intent: ask_example
+      - action: utter_ask_example
+
+  - rule: Answere ask_price
+    steps:
+      - intent: ask_price
+      - action: utter_ask_price
+
+  - rule: Answere ask_price_setup
+    steps:
+      - intent: ask_price_setup
+      - action: utter_ask_price_setup
+
+  - rule: Answere ask_create
+    steps:
+      - intent: ask_create
+      - action: utter_ask_create
