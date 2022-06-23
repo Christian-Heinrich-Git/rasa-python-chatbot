@@ -1,6 +1,10 @@
 version: "3.1"
 
 nlu:
+  - intent: reset
+    examples: |
+      - zurücksetzen
+
   - intent: greet
     examples: |
       - hey
@@ -24,6 +28,43 @@ nlu:
       - bye
       - goodbye
 
+  - intent: confirmation
+    examples: |
+      - cool
+      - okay
+      - perfekt
+      - nice
+      - alles klar
+      - ok
+      - verstanden
+      - k
+      - kk
+
+  - intent: tell_email
+    examples: |
+      - [name@t-online.de](email)
+      - [name@gmail.com](email)
+      - [name@gmx.de](email)
+      - [name@outlook.com](email)
+      - [name@aol.com](email)
+
+  - intent: tell_password
+    examples: |
+      - mein password ist [12345](password)
+      - mein password ist [123456](password)
+      - mein password ist [1234567](password)
+      - mein password ist [12345678](password)
+      - mein password ist [123456789](password)
+      - mein password ist [1234567891](password)
+      - mein password ist [12345678912](password)
+      - mein password ist [123456789123](password)
+      - mein password ist [1234567891234](password)
+      - mein password ist [12345678912345](password)
+      - mein password ist [123456789123456](password)
+      - mein password ist [1234567891234567](password)
+      - mein password ist [12345678912345678](password)
+      - mein password ist [123456789123456789](password)
+
   - intent: ask_whats_innocard
     examples: |
       - Was ist innocard?
@@ -36,16 +77,31 @@ nlu:
       - Hast du ein Beispiel?
       - Zeig mir eine Karte
       - Kann ich eine Karte sehen?
+      - Kann ich eine Inncoard sehen?
       - Kannst du mir eine Karte zeigen?
+      - Kannst du mir eine Innocard zeigen?
+      - Kannst du mir ein Menü zeigen?
       - Ich würde gerne eine Karte sehen
+      - Ich würde gerne ein Menü sehen
+      - Ich würde gerne eine Innocard sehen
 
   - intent: ask_price
     examples: |
       - Was kostet Innocard?
       - Was kostet eine Innocard?
+      - Was kostet eine Karte?
+      - Was kostet ein Menü?
       - Was muss ich für Innocard zahlen?
+      - Was muss ich für Innocard bezahlen?
+      - Was muss ich für eine Innocard zahlen?
+      - Was muss ich für eine Karte zahlen?
+      - Was muss ich für ein Menü zahlen?
       - Was ist der Preis von Innocard?
+      - Was ist der Preis von einer Karte?
+      - Was ist der Preis von einem Menü?
       - Ist Innocard teuer?
+      - Ist eine Karte teuer?
+      - Ist ein Menü teuer?
       - Wie teuer?
       - Wie viel Euro?
 
@@ -59,10 +115,20 @@ nlu:
   - intent: ask_create
     examples: |
       - Wie kann ich eine Innocard erstellen?
+      - Wie kann ich eine Meükarte erstellen?
+      - Wie kann ich eine Speisekarte erstellen?
+      - Wie kann ich eine Karte erstellen?
       - Kannst du eine Innocard erstellen?
-      - Kann ich selber eine Innocard erstellen?
+      - Kannst du eine Menükarte erstellen?
+      - Kannst du eine Speisekarte erstellen?
+      - Kannst du ein Menü erstellen?
+      - Kannst du eien Karte erstellen?
       - Können wir eine Innocard erstellen?
+      - Können wir eine Karte erstellen?
+      - Können wir ein Menü erstellen?
+      - Kannst du mir eine Innocard erstellen?
       - Kannst du mir eine Karte erstellen?
+      - Kannst du mir ein Menü erstellen?
 
   - intent: ask_extra_app
     examples: |

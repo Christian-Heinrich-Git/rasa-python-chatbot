@@ -9,6 +9,7 @@
 
 from typing import Any, Text, Dict, List
 import urllib3
+from rasa_sdk.events import AllSlotsReset
 
 from rasa_sdk import Action, Tracker
 from rasa_sdk.executor import CollectingDispatcher
@@ -47,3 +48,16 @@ class ActionFetchData(Action):
             dispatcher.utter_message(text="blöd")
 
         return []
+
+class ResetSlot(Action):
+    def name(self) -> Text:
+        return "action_reset_slot"
+
+    def run(self, dispatcher: CollectingDispatcher,
+            tracker: Tracker,
+            domain: Dict[Text, Any]) -> List[Dict[Text, Any]]:
+
+        dispatcher.utter_message(text="Erfolgreich zurückgesetzt.")
+
+        # Return the function to run it
+        return [AllSlotsReset()]

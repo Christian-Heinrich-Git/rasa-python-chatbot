@@ -31,7 +31,34 @@ rules:
       - intent: ask_price_setup
       - action: utter_ask_price_setup
 
-  - rule: Answere ask_create
+  - rule: Answere confirmation
+    steps:
+      - intent: confirmation
+      - action: utter_confirmation
+
+  - rule: Reset slots
+    steps:
+      - intent: reset
+      - action: action_reset_slot
+      - action: create_form
+      - active_loop: create_form
+
+  - rule: Activate E-Mail Form
     steps:
       - intent: ask_create
-      - action: utter_ask_create
+      - action: utter_intro_create
+      - action: create_form
+      - active_loop: create_form
+
+  - rule: Submit form
+    condition:
+      # Condition that form is active.
+      - active_loop: create_form
+    steps:
+      # Form is deactivated
+      - action: create_form
+      - active_loop: null
+      - slot_was_set:
+          - requested_slot: null
+      # The actions we want to run when the form is submitted.
+      - action: utter_create_slots

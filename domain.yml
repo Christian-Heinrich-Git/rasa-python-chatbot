@@ -11,19 +11,73 @@ intents:
   - ask_price
   - ask_create
   - ask_price_setup
+  - confirmation
+  - tell_email
+  - tell_password
+
+entities:
+  - email
+  - password
+
+slots:
+  email:
+    type: text
+    influence_conversation: false
+    mappings:
+      - type: from_entity
+        entity: email
+  password:
+    type: text
+    influence_conversation: false
+    mappings:
+      - type: from_entity
+        entity: password
+
+forms:
+  create_form:
+    required_slots:
+      - email
+      - password
 
 responses:
+  utter_ask_email:
+    - text: Was ist deine E-Mail?
+  utter_ask_password:
+    - text: Was ist dein Passwort?
+
   utter_greet:
-    - text: "Hi ich bin die Künstliche Intelligenz von Innocard. Wie kann ich dir behilflich sein?"
+    - text: "Hi, ich bin die Künstliche Intelligenz von Innocard. Wie kann ich dir behilflich sein?"
+    - text: "Hallo :) wie kann ich dir helfen?"
+    - text: "Die Innocard-KI steht dir bereit."
 
   utter_goodbye:
     - text: "Bis bald :)"
+    - text: "Tschau!"
+    - text: "Bye."
+    - text: "Ciao!"
+
+  utter_intro_create:
+    - text: "Selbstverständlich. Hierfür brauche ich deine E-Mail und ein Passwort."
+
+  utter_create_slots:
+    - text: "Deine E-Mail ist: {email} dein Passwort ist: {password}. Soll ich damit eine Karte erstellen?"
+      buttons:
+        - title: "Ja, erstellen."
+          payload: /ask_example
+        - title: "Nein, ändern."
+          payload: "zurücksetzen"
 
   utter_ask_whats_innocard:
     - text: "Innocard ist eine im Web verfügbare digitale Menükarte. Du kannst die Menükarte in jedem Handy über einen QR-Coder oder per Link anschauen. Keine extra App wird benötigt."
+      buttons:
+        - title: "mehr erfahren"
+          payload: /ask_example
 
   utter_aks_extra_app:
     - text: "Innocard benötigt keine extra App. Die Menükarte wird direkt im Browser im Handy geöffnet."
+      buttons:
+        - title: "zeig es mir"
+          payload: /ask_example
 
   utter_try_it:
     - text: "Probiere es gerne selbst aus!"
@@ -34,11 +88,14 @@ responses:
   utter_ask_price_setup:
     - text: "Du kannst deine Karte kostenlos selbst einpflegen. Alternativ können wir deine Karte für eine einmalige Gebühr von 50€ einpflegen."
 
-  utter_ask_create:
-    - text: "Wir können gerne eine Karte zusammen erstellen."
-
   utter_ask_example:
-    - text: "Hier ist ein QR-Code der Shisha Bar: Mosaique Lounge. Diesen kannst du mit deinem Handy scannen oder den Link darunter anklicken."
+    - text: "Hier ist ein QR-Code der Shisha Bar Mosaique Lounge. Diesen kannst du mit deinem Handy scannen oder diesen Link anklicken: https://innocard.digital/menu/mosaique-lounge"
+      image: "https://innocard.eu/testing/innocard-qr-code.png"
+
+  utter_confirmation:
+    - text: Nice 👌🏼 Hast du noch eine Frage?
+    - text: Perfekt 👌🏼 Hast du noch eine Frage?
+    - text: Alles klar 👌🏼 Hast du noch weitere Fragen?
 
 session_config:
   session_expiration_time: 120
@@ -47,3 +104,4 @@ session_config:
 actions:
   - action_hello_world
   - action_fetch_data
+  - action_reset_slot
