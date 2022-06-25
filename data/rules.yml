@@ -1,6 +1,10 @@
 version: "3.1"
 
 rules:
+  - rule: action_session_start
+    steps:
+      - action: action_session_start
+
   - rule: Say goodbye anytime the user says goodbye
     steps:
       - intent: goodbye
@@ -8,13 +12,14 @@ rules:
 
   - rule: Run ActionHelloWorld
     steps:
-      - intent: aks_hello_world
+      - intent: ask_hello_world
       - action: action_hello_world
 
-  - rule: Fetch Data
+  - rule: Send Email
     steps:
-      - intent: fetch_data
-      - action: action_fetch_data
+      - intent: send_email
+      - action: utter_please_wait
+      - action: action_send_email
 
   - rule: Answere ask_example
     steps:
@@ -45,7 +50,7 @@ rules:
 
   - rule: Activate E-Mail Form
     steps:
-      - intent: ask_create
+      - intent: create_now
       - action: utter_intro_create
       - action: create_form
       - active_loop: create_form
@@ -62,3 +67,53 @@ rules:
           - requested_slot: null
       # The actions we want to run when the form is submitted.
       - action: utter_create_slots
+
+  - rule: Answere ask_why_innocard
+    steps:
+      - intent: ask_why_innocard
+      - action: utter_ask_why_innocard
+
+  - rule: Answere ask_change_content
+    steps:
+      - intent: ask_change_content
+      - action: utter_ask_change_content
+
+  - rule: Answere ask_premium
+    steps:
+      - intent: ask_premium
+      - action: utter_ask_premium
+
+  - rule: Answere ask_free
+    steps:
+      - intent: ask_free
+      - action: utter_ask_free
+
+  - rule: Answere ask_difference
+    steps:
+      - intent: ask_difference
+      - action: utter_ask_difference
+
+  - rule: Answere thanks
+    steps:
+      - intent: thanks
+      - action: utter_no_worries
+
+  - rule: Answere ask_how_it_works_customer
+    steps:
+      - intent: ask_how_it_works_customer
+      - action: utter_ask_how_it_works_customer
+
+  - rule: Answere ask_how_it_works
+    steps:
+      - intent: ask_how_it_works
+      - action: utter_ask_how_it_works
+
+  - rule: Answere ask_how_it_works_erstellen_lassen
+    steps:
+      - intent: ask_how_it_works_erstellen_lassen
+      - action: utter_ask_how_it_works_erstellen_lassen
+
+  - rule: Answere ask_how_it_works_selbst_erstellen
+    steps:
+      - intent: ask_how_it_works_selbst_erstellen
+      - action: utter_ask_how_it_works_selbst_erstellen

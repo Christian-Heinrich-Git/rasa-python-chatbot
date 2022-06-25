@@ -18,3 +18,9 @@
 
 1. Run the index.html with python `python3.7 -m http.server`
 2. Run the rasa chat with api enabled `rasa run --enable-api --cors="*"`
+
+## To run the python actions successfully you have to install certificates
+
+1. Go to your Application Folder
+2. Go into Python 3.7
+3. Run the `Install Certificates.command` file

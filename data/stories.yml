@@ -14,4 +14,4 @@ stories:
   - story: try it path 2
     steps:
       - intent: ask_extra_app
-      - action: utter_aks_extra_app
+      - action: utter_ask_extra_app

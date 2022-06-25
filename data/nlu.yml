@@ -48,28 +48,24 @@ nlu:
       - [name@outlook.com](email)
       - [name@aol.com](email)
 
-  - intent: tell_password
+  - intent: tell_businessName
     examples: |
-      - mein password ist [12345](password)
-      - mein password ist [123456](password)
-      - mein password ist [1234567](password)
-      - mein password ist [12345678](password)
-      - mein password ist [123456789](password)
-      - mein password ist [1234567891](password)
-      - mein password ist [12345678912](password)
-      - mein password ist [123456789123](password)
-      - mein password ist [1234567891234](password)
-      - mein password ist [12345678912345](password)
-      - mein password ist [123456789123456](password)
-      - mein password ist [1234567891234567](password)
-      - mein password ist [12345678912345678](password)
-      - mein password ist [123456789123456789](password)
+      - [Meine-Lounge](businessName)
+      - [Hookah-Lounge](businessName)
+      - [Shisha-Lounge](businessName)
+      - [Meine Bar](businessName)
+      - [Tolles Cafe](businessName)
+      - [Eriks Cafe](businessName)
+      - [Theos Cafe](businessName)
+      - [Mein Cafe](businessName)
 
   - intent: ask_whats_innocard
     examples: |
       - Was ist innocard?
       - Kannst du mir innocard erklären?
       - Wie geht das?
+      - Wie funktioniert das?
+      - Wie funktioniert die Innocard?
 
   - intent: ask_example
     examples: |
@@ -112,9 +108,14 @@ nlu:
       - Was kostet die Einrichtung?
       - Was kostet eine Erstellung?
 
-  - intent: ask_create
+  - intent: create_now
+    examples: |
+      - jetzt erstellen
+
+  - intent: ask_how_it_works
     examples: |
       - Wie kann ich eine Innocard erstellen?
+      - Wie funktioniert die Erstellung?
       - Wie kann ich eine Meükarte erstellen?
       - Wie kann ich eine Speisekarte erstellen?
       - Wie kann ich eine Karte erstellen?
@@ -139,10 +140,95 @@ nlu:
       - Brauch ich ne app?
       - muss ich etwas installieren?
 
-  - intent: aks_hello_world
+  - intent: ask_hello_world
     examples: |
       - kannst du hello world ausführen
 
-  - intent: fetch_data
+  - intent: send_email
     examples: |
-      - daten holen
+      - jetzt senden
+
+  - intent: ask_why_innocard
+    examples: |
+      - Was bring mir Innocard?
+      - Welche Vorteile habe ich mit Innocard?
+      - Was bringt mir eine digitale Menükarte?
+
+  - intent: ask_change_content
+    examples: |
+      - Wie kann ich Preise ändern?
+      - Wie kann ich Inhalte ändern?
+      - Wie kann ich die Karte ändern?
+      - Wann kann ich Inhalte ändern?
+      - Wann kann ich Preise ändern?
+      - Kann ich die Bilder ändern?
+      - Kann ich die Bilder auswählen?
+      - Wie kann ich Preise ändern?
+      - Wie kann ich Inhalte ändern?
+
+  - intent: ask_premium
+    examples: |
+      - Was ist Premium?
+      - Was ist Innocard Premium?
+      - Was bring mir Innocard Premium?
+      - Was bring mir Premium?
+      - Was kann ich mit Premium?
+      - Was kann ich mit Premium machen?
+      - Was kann ich mit Premium alles machen?
+
+  - intent: ask_free
+    examples: |
+      - Was ist Free?
+      - Was ist Innocard Free?
+      - Was bring mir Innocard Free?
+      - Was bring mir Free?
+      - Was kann ich mit Free?
+      - Was kann ich mit Free machen?
+      - Was kann ich mit Free alles machen?
+      - Was kann ich mit der kostenlosen Version alles machen?
+      - Was kann ich mit der kostenlosen Version machen?
+      - Was bring mir die kostenlose Version?
+
+  - intent: ask_difference
+    examples: |
+      - Was ist der Unterschied?
+      - Was ist der Unterschied zu Premium?
+      - Was ist der Unterschied zu Innocard Premium?
+      - Was ist der Unterschied zu der kostenlosen Verison?
+      - Was ist der Unterschied zu Innocard Free?
+
+  - intent: ask_design
+    examples: |
+      - Kann ich ein eigenes Design einpflegen?
+      - Kann ich ein eigenes Design haben?
+
+  - intent: thanks
+    examples: |
+      - Danke.
+      - Dankeschön.
+      - Dankeschön!
+      - Dankeschön
+      - Danke!
+      - Vielen Dank
+
+  - intent: ask_how_it_works_customer
+    examples: |
+      - Wie funktioniert es für meine Gäste?
+      - Wie funktioniert es für die Gäste?
+      - Wie funktioniert es für den Gast?
+      - Wie kann der Kunde die Karte aufrufen?
+      - Wie erhält der Kunde die Karte?
+      - Wie erhält der Gast die Karte?
+      - Wie erhalten die Gäste die Karte?
+
+  - intent: ask_how_it_works_erstellen_lassen
+    examples: |
+      - explain_erstellen_lassen
+      - Wie funktioniert das erstellen lassen?
+      - Anleitung erstellen lassen
+
+  - intent: ask_how_it_works_selbst_erstellen
+    examples: |
+      - explain_selbst_erstellen
+      - Wie kann ich die Karte selbst erstellen?
+      - Anleitung selbst erstellen

@@ -5,19 +5,30 @@ intents:
   - goodbye
   - ask_whats_innocard
   - ask_extra_app
-  - aks_hello_world
-  - fetch_data
+  - ask_hello_world
+  - send_email
   - ask_example
   - ask_price
-  - ask_create
+  - create_now
   - ask_price_setup
   - confirmation
   - tell_email
-  - tell_password
+  - tell_businessName
+  - ask_why_innocard
+  - ask_change_content
+  - ask_premium
+  - ask_free
+  - ask_difference
+  - ask_design
+  - thanks
+  - ask_how_it_works_customer
+  - ask_how_it_works_erstellen_lassen
+  - ask_how_it_works_selbst_erstellen
+  - ask_how_it_works
 
 entities:
   - email
-  - password
+  - businessName
 
 slots:
   email:
@@ -26,24 +37,24 @@ slots:
     mappings:
       - type: from_entity
         entity: email
-  password:
+  businessName:
     type: text
     influence_conversation: false
     mappings:
       - type: from_entity
-        entity: password
+        entity: businessName
 
 forms:
   create_form:
     required_slots:
       - email
-      - password
+      - businessName
 
 responses:
   utter_ask_email:
     - text: Was ist deine E-Mail?
-  utter_ask_password:
-    - text: Was ist dein Passwort?
+  utter_ask_businessName:
+    - text: Gespeichert, was ist der Name von deinem Lokal?
 
   utter_greet:
     - text: "Hi, ich bin die Künstliche Intelligenz von Innocard. Wie kann ich dir behilflich sein?"
@@ -57,13 +68,13 @@ responses:
     - text: "Ciao!"
 
   utter_intro_create:
-    - text: "Selbstverständlich. Hierfür brauche ich deine E-Mail und ein Passwort."
+    - text: "Alles klar. Hierfür brauche ich deine E-Mail und den Namen von deinem Lokal."
 
   utter_create_slots:
-    - text: "Deine E-Mail ist: {email} dein Passwort ist: {password}. Soll ich damit eine Karte erstellen?"
+    - text: "Deine E-Mail ist: {email} dein Lokal ist: {businessName}. Soll ich diese Daten senden?"
       buttons:
         - title: "Ja, erstellen."
-          payload: /ask_example
+          payload: /send_email
         - title: "Nein, ändern."
           payload: "zurücksetzen"
 
@@ -73,7 +84,7 @@ responses:
         - title: "mehr erfahren"
           payload: /ask_example
 
-  utter_aks_extra_app:
+  utter_ask_extra_app:
     - text: "Innocard benötigt keine extra App. Die Menükarte wird direkt im Browser im Handy geöffnet."
       buttons:
         - title: "zeig es mir"
@@ -93,9 +104,60 @@ responses:
       image: "https://innocard.eu/testing/innocard-qr-code.png"
 
   utter_confirmation:
-    - text: Nice 👌🏼 Hast du noch eine Frage?
-    - text: Perfekt 👌🏼 Hast du noch eine Frage?
-    - text: Alles klar 👌🏼 Hast du noch weitere Fragen?
+    - text: "Nice 👌🏼 Hast du noch eine Frage?"
+    - text: "Perfekt 👌🏼 Hast du noch eine Frage?"
+    - text: "Alles klar 👌🏼 Hast du noch weitere Fragen?"
+
+  utter_ask_why_innocard:
+    - text: "Du musst keine Menükarten mehr anbieten, säubern oder drucken – dadurch sparst du Personal- und Materialkosten."
+    - text: "Nie wieder Stress mit Angeboten, neuen Produkten oder Preisänderungen. Du kannst dein Menü kinderleicht mit einem Klick anpassen."
+    - text: "Hygiene ist seit der Pandemie ein Wohlfühlfaktor geworden. Durch eine digitale Menükarte, welche über einen QR-Code am Tisch aufgerufen werden kann, erhöhst du den Wohlfühlfaktor für deine Gäste enorm."
+
+  utter_ask_change_content:
+    - text: "Du kannst Änderungen jederzeit mit einem Klick vornehmen. Preise, Bilder, Reihenfolgen und mehr. Du kannst dich von jedem Gerät (Handy, Laptop etc.) auf https://innocard.digital/login mit deinem Account einloggen und deine Karte verändern. Keine extra App notwendig."
+
+  utter_ask_premium:
+    - text: "Innocard Premium bietet dir eine Karte ohne Werbung, Bearbeitung in Echtzeit, ist Monatlich kündbar, du kannst dein Eigenes Logo verwenden, deinen QR-Code selbst drucken, die Karte ist Sofort Verfügbar, du hast einen Social-Media-Integration und kannst Kundenfeedback erhalten"
+
+  utter_ask_free:
+    - text: "Mit der kostenlosen Version von Innocard erhältst du die gleichen Vorteile wie bei Premium. Jedoch enthält die Karte Werbung, welche bei Innocard Premium nicht vorhanden ist. Gerne kannst du Innocard Free unverbindlich ausprobieren. Wenn dir Innocard gefällt, empfehlen wir die Innocard Premium zu abonnieren, um deinen Gästen ein einwandfreies Erlebnis zu bieten."
+
+  utter_ask_difference:
+    - text: "Mit der kostenlosen Version von Innocard erhältst du die gleichen Vorteile wie bei Premium. Jedoch enthält die Karte Werbung, welche bei Innocard Premium nicht vorhanden ist. Gerne kannst du Innocard Free unverbindlich ausprobieren. Wenn dir Innocard gefällt, empfehlen wir die Innocard Premium zu abonnieren, um deinen Gästen ein einwandfreies Erlebnis zu bieten."
+
+  utter_ask_design:
+    - text: "Die Menükarte wird auf das Geschäftsdesign abgestimmt. So erhalten Gäste eine perfekt integrierte Menükarte mit dem Design deines Lokals. Hier sind 3 Beispiele:"
+      image: "https://innocard.eu/promotion/dein-design-min.png"
+
+  utter_ask_how_it_works_customer:
+    - text: "1. Platziere einen QR-Code auf deinem Tisch. Deine Gäste können diesen mit dem Handy scannen. 2. Die Menükarte öffnet sich direkt im Handy. Keine extra App. Kein PDF-Download."
+      buttons:
+        - title: "zeig es mir"
+          payload: /ask_example
+
+  utter_ask_how_it_works:
+    - text: "Du kannst deine Karte entweder von uns erstellen lassen (49 € einmalige Einrichtungsgebühr) oder kostenlos selbst erstellen. Wie möchtest du es machen?"
+      buttons:
+        - title: "erstellen lassen"
+          payload: /ask_how_it_works_erstellen_lassen
+        - title: "selbst erstellen"
+          payload: /ask_how_it_works_selbst_erstellen
+
+  utter_ask_how_it_works_erstellen_lassen:
+    - text: "1. Du sendest uns alle relevanten Daten und bezahlst die Einrichtungsgebühr. 2. Du kannst dich zurücklehnen. Wir erstellen deine Karte und senden dir die Zugangsdaten zu deinem Account. 3. Wir erstellen dir hochwertige 3D-Geld Aufkleber mit deinem QR-Code. Alternative: selbst drucken."
+      buttons:
+        - title: "Jetzt erstellen lassen"
+          payload: "jetzt erstellen"
+
+  utter_ask_how_it_works_selbst_erstellen:
+    - text: "1. Über den Innodesigner kannst du deine Karte ganz einfach selbst erstellen. 2. Account erstellen. Speicher deine Karte online und verknüpfe sie mit einem Account, um die Bearbeitung jederzeit fort zu setzen. 3. Wir erstellen dir hochwertige 3D-Geld Aufkleber mit deinem QR-Code. Alternative: selbst drucken."
+
+  utter_no_worries:
+    - text: "Gerne, kein Problem! Hast du weitere Fragen?"
+    - text: "Sehr gerne :) Hast du weitere Anliegen?"
+
+  utter_please_wait:
+    - text: "Bitte warten..."
 
 session_config:
   session_expiration_time: 120
@@ -103,5 +165,6 @@ session_config:
 
 actions:
   - action_hello_world
-  - action_fetch_data
+  - action_send_email
   - action_reset_slot
+  - action_session_start
