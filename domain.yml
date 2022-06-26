@@ -21,9 +21,9 @@ intents:
   - ask_difference
   - ask_design
   - thanks
-  - ask_how_it_works_customer
-  - ask_how_it_works_erstellen_lassen
-  - ask_how_it_works_selbst_erstellen
+  - ask_how_customer
+  - ask_let_create
+  - ask_self_create
   - ask_how_it_works
 
 entities:
@@ -57,8 +57,8 @@ responses:
     - text: Gespeichert, was ist der Name von deinem Lokal?
 
   utter_greet:
-    - text: "Hi, ich bin die Künstliche Intelligenz von Innocard. Wie kann ich dir behilflich sein?"
-    - text: "Hallo :) wie kann ich dir helfen?"
+    - text: "Ich bin die Künstliche Intelligenz von Innocard. Wie kann ich dir behilflich sein?"
+    - text: "Wie kann ich dir behilflich sein?"
     - text: "Die Innocard-KI steht dir bereit."
 
   utter_goodbye:
@@ -129,8 +129,8 @@ responses:
     - text: "Die Menükarte wird auf das Geschäftsdesign abgestimmt. So erhalten Gäste eine perfekt integrierte Menükarte mit dem Design deines Lokals. Hier sind 3 Beispiele:"
       image: "https://innocard.eu/promotion/dein-design-min.png"
 
-  utter_ask_how_it_works_customer:
-    - text: "1. Platziere einen QR-Code auf deinem Tisch. Deine Gäste können diesen mit dem Handy scannen. 2. Die Menükarte öffnet sich direkt im Handy. Keine extra App. Kein PDF-Download."
+  utter_ask_how_customer:
+    - text: "So geht's: Platziere einen QR-Code auf deinem Tisch. Deine Gäste können diesen mit dem Handy scannen. 2. Die Menükarte öffnet sich direkt im Handy. Keine extra App. Kein PDF-Download."
       buttons:
         - title: "zeig es mir"
           payload: /ask_example
@@ -139,18 +139,18 @@ responses:
     - text: "Du kannst deine Karte entweder von uns erstellen lassen (49 € einmalige Einrichtungsgebühr) oder kostenlos selbst erstellen. Wie möchtest du es machen?"
       buttons:
         - title: "erstellen lassen"
-          payload: /ask_how_it_works_erstellen_lassen
+          payload: "Anleitung erstellen lassen"
         - title: "selbst erstellen"
-          payload: /ask_how_it_works_selbst_erstellen
+          payload: "Anleitung selbst erstellen"
 
-  utter_ask_how_it_works_erstellen_lassen:
-    - text: "1. Du sendest uns alle relevanten Daten und bezahlst die Einrichtungsgebühr. 2. Du kannst dich zurücklehnen. Wir erstellen deine Karte und senden dir die Zugangsdaten zu deinem Account. 3. Wir erstellen dir hochwertige 3D-Geld Aufkleber mit deinem QR-Code. Alternative: selbst drucken."
+  utter_ask_let_create:
+    - text: "So geht's: Du sendest uns alle relevanten Daten und bezahlst die Einrichtungsgebühr. 2. Du kannst dich zurücklehnen. Wir erstellen deine Karte und senden dir die Zugangsdaten zu deinem Account. 3. Wir erstellen dir hochwertige 3D-Geld Aufkleber mit deinem QR-Code. Alternative: selbst drucken."
       buttons:
         - title: "Jetzt erstellen lassen"
           payload: "jetzt erstellen"
 
-  utter_ask_how_it_works_selbst_erstellen:
-    - text: "1. Über den Innodesigner kannst du deine Karte ganz einfach selbst erstellen. 2. Account erstellen. Speicher deine Karte online und verknüpfe sie mit einem Account, um die Bearbeitung jederzeit fort zu setzen. 3. Wir erstellen dir hochwertige 3D-Geld Aufkleber mit deinem QR-Code. Alternative: selbst drucken."
+  utter_ask_self_create:
+    - text: "So geht's: Über den Innodesigner kannst du deine Karte ganz einfach selbst erstellen. 2. Account erstellen. Speicher deine Karte online und verknüpfe sie mit einem Account, um die Bearbeitung jederzeit fort zu setzen. 3. Wir erstellen dir hochwertige 3D-Geld Aufkleber mit deinem QR-Code. Alternative: selbst drucken."
 
   utter_no_worries:
     - text: "Gerne, kein Problem! Hast du weitere Fragen?"

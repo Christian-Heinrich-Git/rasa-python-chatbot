@@ -1,4 +1,6 @@
-<head> </head>
+<head>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+</head>
 <body style="margin: 0">
   <div>
     <iframe
@@ -7,7 +9,14 @@
     ></iframe>
   </div>
   <div class="chat-container"></div>
+  <!-- // Solution: https://forum.rasa.com/t/how-to-implement-a-welcome-message/49282/2 -->
   <div
+    data-initial-payload="/greet"
+    data-avatar-url="https://innocard.eu/testing/innocard_icon.png"
+    data-avatar-background="black"
+    data-primary="#0b5ed7"
+    data-primary-highlight="#0b5ed7"
+    data-width="500"
     id="rasa-chat-widget"
     data-websocket-url="http://localhost:5005/socket.io"
   ></div>
@@ -15,4 +24,25 @@
     src="https://unpkg.com/@rasahq/rasa-chat"
     type="application/javascript"
   ></script>
+  <script>
+    $(document).ready(() => {
+      send("Hi");
+    });
+
+    // found in: https://forum.rasa.com/t/how-to-send-post-request-to-rasa-core-server/6376/17
+    function send(message) {
+      $.ajax({
+        url: "http://localhost:5005/webhooks/rest/webhook",
+        type: "POST",
+        contentType: "application/json",
+        data: JSON.stringify({ message, sender: "rasa" }),
+        success(botResponse, status) {
+          console.log("Success", botResponse);
+        },
+        error(xhr, textStatus) {
+          console.log("Error", textStatus, xhr);
+        },
+      });
+    }
+  </script>
 </body>

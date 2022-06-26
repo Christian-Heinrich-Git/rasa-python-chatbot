@@ -82,7 +82,7 @@ class ActionSessionStart(Action):
             tracker: Tracker,
             domain: Dict[Text, Any]) -> List[Dict[Text, Any]]:
 
-        dispatcher.utter_message(text="Hi.")
+        dispatcher.utter_message(text="Hi :)")
 
         # the session should begin with a `session_started` event
         events = [SessionStarted()]

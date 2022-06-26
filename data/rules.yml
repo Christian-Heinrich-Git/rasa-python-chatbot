@@ -98,22 +98,22 @@ rules:
       - intent: thanks
       - action: utter_no_worries
 
-  - rule: Answere ask_how_it_works_customer
+  - rule: Answere ask_how_customer
     steps:
-      - intent: ask_how_it_works_customer
-      - action: utter_ask_how_it_works_customer
+      - intent: ask_how_customer
+      - action: utter_ask_how_customer
 
   - rule: Answere ask_how_it_works
     steps:
       - intent: ask_how_it_works
       - action: utter_ask_how_it_works
 
-  - rule: Answere ask_how_it_works_erstellen_lassen
+  - rule: Answere ask_let_create
     steps:
-      - intent: ask_how_it_works_erstellen_lassen
-      - action: utter_ask_how_it_works_erstellen_lassen
+      - intent: ask_let_create
+      - action: utter_ask_let_create
 
-  - rule: Answere ask_how_it_works_selbst_erstellen
+  - rule: Answere ask_self_create
     steps:
-      - intent: ask_how_it_works_selbst_erstellen
-      - action: utter_ask_how_it_works_selbst_erstellen
+      - intent: ask_self_create
+      - action: utter_ask_self_create

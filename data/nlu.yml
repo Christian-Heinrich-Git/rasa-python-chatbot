@@ -211,7 +211,7 @@ nlu:
       - Danke!
       - Vielen Dank
 
-  - intent: ask_how_it_works_customer
+  - intent: ask_how_customer
     examples: |
       - Wie funktioniert es für meine Gäste?
       - Wie funktioniert es für die Gäste?
@@ -221,14 +221,12 @@ nlu:
       - Wie erhält der Gast die Karte?
       - Wie erhalten die Gäste die Karte?
 
-  - intent: ask_how_it_works_erstellen_lassen
+  - intent: ask_let_create
     examples: |
-      - explain_erstellen_lassen
       - Wie funktioniert das erstellen lassen?
       - Anleitung erstellen lassen
 
-  - intent: ask_how_it_works_selbst_erstellen
+  - intent: ask_self_create
     examples: |
-      - explain_selbst_erstellen
       - Wie kann ich die Karte selbst erstellen?
       - Anleitung selbst erstellen
