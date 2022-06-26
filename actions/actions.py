@@ -43,7 +43,6 @@ class ActionSendEmail(Action):
         businessName = tracker.get_slot("businessName")
         print(businessName)
 
-        # TODO: über status codes zurück schicken ob es geklappt hat  oder nicht
         http = urllib3.PoolManager()
         encoded_body = json.dumps({
         "email": email,

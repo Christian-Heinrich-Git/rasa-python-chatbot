@@ -79,7 +79,7 @@ responses:
           payload: "zurücksetzen"
 
   utter_ask_whats_innocard:
-    - text: "Innocard ist eine im Web verfügbare digitale Menükarte. Du kannst die Menükarte in jedem Handy über einen QR-Coder oder per Link anschauen. Keine extra App wird benötigt."
+    - text: "Innocard ist eine im Web verfügbare digitale Menükarte. Du kannst die Menükarte in jedem Handy über einen QR-Code oder per Link anschauen. Keine extra App wird benötigt."
       buttons:
         - title: "mehr erfahren"
           payload: /ask_example
@@ -147,7 +147,7 @@ responses:
     - text: "So geht's: Du sendest uns alle relevanten Daten und bezahlst die Einrichtungsgebühr. 2. Du kannst dich zurücklehnen. Wir erstellen deine Karte und senden dir die Zugangsdaten zu deinem Account. 3. Wir erstellen dir hochwertige 3D-Geld Aufkleber mit deinem QR-Code. Alternative: selbst drucken."
       buttons:
         - title: "Jetzt erstellen lassen"
-          payload: "jetzt erstellen"
+          payload: /create_now
 
   utter_ask_self_create:
     - text: "So geht's: Über den Innodesigner kannst du deine Karte ganz einfach selbst erstellen. 2. Account erstellen. Speicher deine Karte online und verknüpfe sie mit einem Account, um die Bearbeitung jederzeit fort zu setzen. 3. Wir erstellen dir hochwertige 3D-Geld Aufkleber mit deinem QR-Code. Alternative: selbst drucken."
