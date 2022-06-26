@@ -117,3 +117,8 @@ rules:
     steps:
       - intent: ask_self_create
       - action: utter_ask_self_create
+
+  - rule: Ask the user to rephrase whenever they send a message with low NLU confidence
+    steps:
+      - intent: nlu_fallback
+      - action: utter_please_rephrase

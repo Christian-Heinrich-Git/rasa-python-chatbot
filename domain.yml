@@ -159,6 +159,11 @@ responses:
   utter_please_wait:
     - text: "Bitte warten..."
 
+  utter_please_rephrase:
+    - text: "Sorry, das habe ich nicht verstanden. Könntest du dein Anliegen auf eine andere Art beschreiben?"
+    - text: "Entschuldigung, das habe ich nicht verstanden. Könntest du dein Anliegen auf eine andere Art beschreiben?"
+    - text: "Ups, das habe ich nicht verstanden. Kannst du dein Anliegen auf eine andere Art beschreiben?"
+
 session_config:
   session_expiration_time: 120
   carry_over_slots_to_new_session: true
