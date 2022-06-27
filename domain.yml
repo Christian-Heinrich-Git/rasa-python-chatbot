@@ -57,7 +57,7 @@ responses:
     - text: Gespeichert, was ist der Name von deinem Lokal?
 
   utter_greet:
-    - text: "Ich bin die Künstliche Intelligenz von Innocard. Wie kann ich dir behilflich sein?"
+    - text: "Ich bin die künstliche Intelligenz von Innocard. Wie kann ich dir behilflich sein?"
     - text: "Wie kann ich dir behilflich sein?"
     - text: "Die Innocard-KI steht dir bereit."
 
@@ -73,7 +73,7 @@ responses:
   utter_create_slots:
     - text: "Deine E-Mail ist: {email} dein Lokal ist: {businessName}. Soll ich diese Daten senden?"
       buttons:
-        - title: "Ja, erstellen."
+        - title: "Ja, senden."
           payload: /send_email
         - title: "Nein, ändern."
           payload: "zurücksetzen"
@@ -97,7 +97,7 @@ responses:
     - text: "Innocard Free ist vollständig kostenlos mit Werbung. Innocard Premium kostet nur 29€ pro Monat und ist komplett werbefrei."
 
   utter_ask_price_setup:
-    - text: "Du kannst deine Karte kostenlos selbst einpflegen. Alternativ können wir deine Karte für eine einmalige Gebühr von 50€ einpflegen."
+    - text: "Du kannst deine Karte kostenlos selbst einpflegen. Alternativ können wir deine Karte für eine einmalige Gebühr von 49€ einpflegen."
 
   utter_ask_example:
     - text: "Hier ist ein QR-Code der Shisha Bar Mosaique Lounge. Diesen kannst du mit deinem Handy scannen oder diesen Link anklicken: https://innocard.digital/menu/mosaique-lounge"
@@ -117,13 +117,13 @@ responses:
     - text: "Du kannst Änderungen jederzeit mit einem Klick vornehmen. Preise, Bilder, Reihenfolgen und mehr. Du kannst dich von jedem Gerät (Handy, Laptop etc.) auf https://innocard.digital/login mit deinem Account einloggen und deine Karte verändern. Keine extra App notwendig."
 
   utter_ask_premium:
-    - text: "Innocard Premium bietet dir eine Karte ohne Werbung, Bearbeitung in Echtzeit, ist Monatlich kündbar, du kannst dein Eigenes Logo verwenden, deinen QR-Code selbst drucken, die Karte ist Sofort Verfügbar, du hast einen Social-Media-Integration und kannst Kundenfeedback erhalten"
+    - text: "Innocard Premium bietet dir eine Karte ohne Werbung, Bearbeitung in Echtzeit, ist monatlich kündbar, du kannst dein eigenes Logo verwenden, deinen QR-Code selbst drucken, die Karte ist sofort verfügbar, du hast eine Social-Media-Integration und kannst Kundenfeedback erhalten."
 
   utter_ask_free:
-    - text: "Mit der kostenlosen Version von Innocard erhältst du die gleichen Vorteile wie bei Premium. Jedoch enthält die Karte Werbung, welche bei Innocard Premium nicht vorhanden ist. Gerne kannst du Innocard Free unverbindlich ausprobieren. Wenn dir Innocard gefällt, empfehlen wir die Innocard Premium zu abonnieren, um deinen Gästen ein einwandfreies Erlebnis zu bieten."
+    - text: "Mit der kostenlosen Version von Innocard erhältst du die gleichen Vorteile wie bei Premium. Jedoch enthält die Karte Werbung, welche bei Innocard Premium nicht vorhanden ist. Gerne kannst du Innocard Free unverbindlich ausprobieren. Wenn dir Innocard gefällt, empfehlen wir dir Innocard Premium zu abonnieren, um deinen Gästen ein einwandfreies Erlebnis zu bieten."
 
   utter_ask_difference:
-    - text: "Mit der kostenlosen Version von Innocard erhältst du die gleichen Vorteile wie bei Premium. Jedoch enthält die Karte Werbung, welche bei Innocard Premium nicht vorhanden ist. Gerne kannst du Innocard Free unverbindlich ausprobieren. Wenn dir Innocard gefällt, empfehlen wir die Innocard Premium zu abonnieren, um deinen Gästen ein einwandfreies Erlebnis zu bieten."
+    - text: "Mit der kostenlosen Version von Innocard erhältst du die gleichen Vorteile wie bei Premium. Jedoch enthält die Karte Werbung, welche bei Innocard Premium nicht vorhanden ist. Gerne kannst du Innocard Free unverbindlich ausprobieren. Wenn dir Innocard gefällt, empfehlen wir dir Innocard Premium zu abonnieren, um deinen Gästen ein einwandfreies Erlebnis zu bieten."
 
   utter_ask_design:
     - text: "Die Menükarte wird auf das Geschäftsdesign abgestimmt. So erhalten Gäste eine perfekt integrierte Menükarte mit dem Design deines Lokals. Hier sind 3 Beispiele:"
@@ -144,13 +144,13 @@ responses:
           payload: "Anleitung selbst erstellen"
 
   utter_ask_let_create:
-    - text: "So geht's: Du sendest uns alle relevanten Daten und bezahlst die Einrichtungsgebühr. 2. Du kannst dich zurücklehnen. Wir erstellen deine Karte und senden dir die Zugangsdaten zu deinem Account. 3. Wir erstellen dir hochwertige 3D-Geld Aufkleber mit deinem QR-Code. Alternative: selbst drucken."
+    - text: "So geht's: Du sendest uns alle relevanten Daten und bezahlst die Einrichtungsgebühr. 2. Du kannst dich zurücklehnen. Wir erstellen deine Karte und senden dir die Zugangsdaten zu deinem Account. 3. Wir erstellen dir hochwertige 3D-Geld Aufkleber mit deinem Logo und QR-Code. Alternative: selbst drucken."
       buttons:
         - title: "Jetzt erstellen lassen"
           payload: /create_now
 
   utter_ask_self_create:
-    - text: "So geht's: Über den Innodesigner kannst du deine Karte ganz einfach selbst erstellen. 2. Account erstellen. Speicher deine Karte online und verknüpfe sie mit einem Account, um die Bearbeitung jederzeit fort zu setzen. 3. Wir erstellen dir hochwertige 3D-Geld Aufkleber mit deinem QR-Code. Alternative: selbst drucken."
+    - text: "So geht's: Über den Innodesigner kannst du deine Karte ganz einfach selbst erstellen. 2. Account erstellen. Speicher deine Karte online und verknüpfe sie mit einem Account, um die Bearbeitung jederzeit fortzusetzen. 3. Wir erstellen dir hochwertige 3D-Geld Aufkleber mit deinem Logo und QR-Code. Alternative: selbst drucken."
 
   utter_no_worries:
     - text: "Gerne, kein Problem! Hast du weitere Fragen?"

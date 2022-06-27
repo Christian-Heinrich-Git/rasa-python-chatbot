@@ -62,7 +62,7 @@ nlu:
   - intent: ask_whats_innocard
     examples: |
       - Was ist innocard?
-      - Kannst du mir innocard erklären?
+      - Kannst du mir Innocard erklären?
       - Wie geht das?
       - Wie funktioniert das?
       - Wie funktioniert die Innocard?
@@ -123,7 +123,7 @@ nlu:
       - Kannst du eine Menükarte erstellen?
       - Kannst du eine Speisekarte erstellen?
       - Kannst du ein Menü erstellen?
-      - Kannst du eien Karte erstellen?
+      - Kannst du eine Karte erstellen?
       - Können wir eine Innocard erstellen?
       - Können wir eine Karte erstellen?
       - Können wir ein Menü erstellen?
@@ -135,10 +135,11 @@ nlu:
     examples: |
       - Brauche ich eine App?
       - Brauchen meine Kunden eine App?
-      - Benötigt man eine extra app?
-      - Wird eine app benötigt?
-      - Brauch ich ne app?
-      - muss ich etwas installieren?
+      - Brauchen meine Gäste eine App?
+      - Benötigt man eine extra App?
+      - Wird eine App benötigt?
+      - Brauch ich ne App?
+      - Muss ich etwas installieren?
 
   - intent: ask_hello_world
     examples: |
@@ -157,6 +158,8 @@ nlu:
   - intent: ask_change_content
     examples: |
       - Wie kann ich Preise ändern?
+      - Wie kann ich die Preise ändern?
+      - Wie kann ich meine Preise ändern?
       - Wie kann ich Inhalte ändern?
       - Wie kann ich die Karte ändern?
       - Wann kann ich Inhalte ändern?
@@ -164,7 +167,6 @@ nlu:
       - Kann ich die Bilder ändern?
       - Kann ich die Bilder auswählen?
       - Wie kann ich Preise ändern?
-      - Wie kann ich Inhalte ändern?
 
   - intent: ask_premium
     examples: |
